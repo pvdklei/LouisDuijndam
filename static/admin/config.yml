@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: pvdklei/LouisDuijndam
+  branch: main
+  base_url: https://louis.scheetjes.nl
+  auth_endpoint: /api/auth
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+locale: "nl"
+
+collections:
+  - name: "posts"
+    label: "Blogposts"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Concept", name: "draft", widget: "boolean", default: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Tekst", name: "body", widget: "markdown" }

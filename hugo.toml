@@ -1,0 +1,23 @@
+baseURL = "https://louis.scheetjes.nl/"
+languageCode = "nl"
+title = "Louis Duijndam"
+
+[params]
+  description = "Dit gaat er zoal in mijn koppie rond."
+  author = "Louis Duijndam"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[permalinks]
+  posts = "/posts/:slug/"

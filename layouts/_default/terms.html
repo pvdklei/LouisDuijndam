@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="page-list">
+  <h1>Tags</h1>
+  <div class="post-tags" style="padding-top: 1rem;">
+    {{ range .Data.Terms.Alphabetical }}
+    <a href="{{ .Page.RelPermalink }}" class="tag" style="font-size: 0.85rem; padding: 0.3rem 0.75rem;">
+      {{ .Page.Title }} ({{ .Count }})
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
